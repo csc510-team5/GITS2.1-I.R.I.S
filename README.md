@@ -163,6 +163,4 @@ This repository is made for CSC-510 Software Engineering Course at NC State Univ
   </tr>
 </table>
 
-
-
 Made with love on GitHub.
