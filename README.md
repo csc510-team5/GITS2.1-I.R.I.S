@@ -55,10 +55,7 @@ https://user-images.githubusercontent.com/47474447/141851475-3eb31270-a38e-4cd6-
 
 # Video for Delta Features Phase 3 (Working on Windows as well as MacOs/Linux)
 
-
 https://user-images.githubusercontent.com/25223347/143947205-3668d521-0bcc-4dc3-aea6-342fc199eb24.mp4
-
-
 
 # Installation Setup
 
