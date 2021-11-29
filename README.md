@@ -95,11 +95,8 @@ https://user-images.githubusercontent.com/25223347/143947205-3668d521-0bcc-4dc3-
     ```
     pip install -r requirements.txt
     ```
-3.  Currently, this project cannot be run on Windows. You need to make use of WSL to work on this project in Windows
-    although this fix would only work for systems running Windows 10. If you are using another version of Windows, using a
-    virtual machine might be preferred.
-
-        Please refer this link to enable WSL : https://docs.microsoft.com/en-us/windows/wsl/install-win10
+3.  Run "windows_setup.bat" from configurations folder to setup environment.
+4.  Run "autoRun.bat" as administrator.
 
 # How to Contribute?
 
