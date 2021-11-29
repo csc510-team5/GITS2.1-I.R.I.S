@@ -97,6 +97,7 @@ https://user-images.githubusercontent.com/25223347/143947205-3668d521-0bcc-4dc3-
     ```
 3.  Run "windows_setup.bat" from configurations folder to setup environment.
 4.  Run "autoRun.bat" as administrator.
+5.  Now gits command is accessible all over the system.
 
 # How to Contribute?
 
