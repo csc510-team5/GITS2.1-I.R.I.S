@@ -114,7 +114,7 @@ Please take a look at our CONTRIBUTING.md where we provide instructions on contr
 4. Created commands to show version of Git, count commits, list all custom created commands.
 5. Create a custom command to work with Git and make development fun.
 
-## Experimentation setup for Phase 2
+## Experimentation setup for Phase 3
 
 (Please check the Projects Tab to see how you can make the project better)
 
@@ -132,7 +132,7 @@ To solve the issues described above, we came up with the project **I.R.I.S** tha
 
 You can checkout the Projects Tab in GitHub to see the upcoming tasks for the Project.
 
-## Delta for Phase 2
+## Delta for Phase 3
 
 - [x] Initally , the software could only be implemented on MacOs or Linux Machines. Now we have made sure the commands can be executed on windows and that the software can be executed on windows platform as well.
 - [x] Also made an executable to setup the project on command line for ease of use for the user.
