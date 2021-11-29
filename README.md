@@ -47,8 +47,6 @@ I.R.I.S streamlines your repository as per the Software Engineering Standards, s
 
 I.R.I.S can be thought of a base repo to make sure your project repo fits the bill.
 
-![](https://media.giphy.com/media/Lp8kVSwaSU6V9oATDM/giphy.gif)
-
 # Video for Delta Features
 
 https://user-images.githubusercontent.com/47474447/141851475-3eb31270-a38e-4cd6-bf7f-7b536fd5c10a.mp4
@@ -97,11 +95,9 @@ https://user-images.githubusercontent.com/25223347/143947205-3668d521-0bcc-4dc3-
     ```
     pip install -r requirements.txt
     ```
-3.  Currently, this project cannot be run on Windows. You need to make use of WSL to work on this project in Windows
-    although this fix would only work for systems running Windows 10. If you are using another version of Windows, using a
-    virtual machine might be preferred.
-
-        Please refer this link to enable WSL : https://docs.microsoft.com/en-us/windows/wsl/install-win10
+3.  Run "windows_setup.bat" from configurations folder to setup environment.
+4.  Run "autoRun.bat" as administrator.
+5.  Now gits command is accessible all over the system.
 
 # How to Contribute?
 
@@ -118,7 +114,7 @@ Please take a look at our CONTRIBUTING.md where we provide instructions on contr
 4. Created commands to show version of Git, count commits, list all custom created commands.
 5. Create a custom command to work with Git and make development fun.
 
-## Experimentation setup for Phase 2
+## Experimentation setup for Phase 3
 
 (Please check the Projects Tab to see how you can make the project better)
 
@@ -136,7 +132,7 @@ To solve the issues described above, we came up with the project **I.R.I.S** tha
 
 You can checkout the Projects Tab in GitHub to see the upcoming tasks for the Project.
 
-## Delta for Phase 2
+## Delta for Phase 3
 
 - [x] Initally , the software could only be implemented on MacOs or Linux Machines. Now we have made sure the commands can be executed on windows and that the software can be executed on windows platform as well.
 - [x] Also made an executable to setup the project on command line for ease of use for the user.
@@ -168,3 +164,4 @@ This repository is made for CSC-510 Software Engineering Course at NC State Univ
 </table>
 
 Made with love on GitHub.
+For any questions and contribution please contact: jshah7@ncsu.edu
