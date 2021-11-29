@@ -47,8 +47,6 @@ I.R.I.S streamlines your repository as per the Software Engineering Standards, s
 
 I.R.I.S can be thought of a base repo to make sure your project repo fits the bill.
 
-![](https://media.giphy.com/media/Lp8kVSwaSU6V9oATDM/giphy.gif)
-
 # Video for Delta Features
 
 https://user-images.githubusercontent.com/47474447/141851475-3eb31270-a38e-4cd6-bf7f-7b536fd5c10a.mp4
