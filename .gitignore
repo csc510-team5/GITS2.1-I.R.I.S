@@ -119,3 +119,8 @@ build-iPhoneSimulator/
 __pycache__/
 *.py[cod]
 *$py.class
+
+# ingore configuration files
+*.doskey
+autoRun.bat
+.gits/
