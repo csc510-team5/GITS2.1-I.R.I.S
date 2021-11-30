@@ -136,10 +136,15 @@ You can checkout the Projects Tab in GitHub to see the upcoming tasks for the Pr
 
 - [x] Initally , the software could only be implemented on MacOs or Linux Machines. Now we have made sure the commands can be executed on windows and that the software can be executed on windows platform as well.
 - [x] Also made an executable to setup the project on command line for ease of use for the user.
+- [x] The commands now run on windows and are able to take arguments as well.
+- [x] The user needs to set up and authenticate this software just once. Alias gets created that is permanent and can be used from anywhere on the command line in windows.
 
 ## Future Scope
 
 - [ ] Can add more git custom commands to improve quality of life.
+- [ ] Can allow users to create commands that they want.
+- [ ] Implement a UI.
+- [ ] Implement the software on docker to make it totally OS independent.
 
 ### Quantitative measures
 
@@ -163,5 +168,10 @@ This repository is made for CSC-510 Software Engineering Course at NC State Univ
   </tr>
 </table>
 
-Made with love on GitHub.
+## Contact Us:
+
 For any questions and contribution please contact: jshah7@ncsu.edu
+
+
+
+Made with ❤️ on GitHub.
