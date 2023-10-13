@@ -3,7 +3,7 @@
 import sys
 import argparse
 from gits_logging import init_gits_logger
-from gits_hello import gits_hello_world
+from gits_hello import gits_hello
 from gits_add import gits_add_func
 from gits_commit import gits_commit_func
 from gits_set import gits_set_func
@@ -44,8 +44,8 @@ if not logger_status:
 parser = argparse.ArgumentParser()
 subparsers = parser.add_subparsers()
 
-gits_hello_subparser = subparsers.add_parser('hello_world')
-gits_hello_subparser.set_defaults(func=gits_hello_world)
+gits_hello_subparser = subparsers.add_parser('hello')
+gits_hello_subparser.set_defaults(func=gits_hello)
 
 gits_auth_subparser = subparsers.add_parser('auth')
 # gits_auth_subparser.add_argument("method", help="Method: Either use --web or --with-token")
