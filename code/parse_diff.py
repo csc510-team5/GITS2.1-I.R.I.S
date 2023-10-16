@@ -18,7 +18,7 @@ def get_common_modified_lines(gmr_old: List[str], gmr1_new: List[str], gmr2_new:
     gmr2_modified_lines = get_modified_lines(gmr2_patch)
 
     # Find the common modified lines between gmr1 and gmr2
-    return list(filter(lambda line: line in gmr2_modified_lines, gmr1_modified_lines))
+    return list(set(gmr1_modified_lines) & set(gmr2_modified_lines))
 
 def normalize_line_endings(text: str) -> str:
     # Normalize line endings to '\n'
@@ -43,4 +43,3 @@ def get_modified_lines(patch: Iterable[str]) -> List[int]:
             old_start += 1
 
     return modified_lines
-
