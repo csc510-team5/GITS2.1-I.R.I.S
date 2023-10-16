@@ -13,7 +13,7 @@ def test_common_modified_lines_modify_one_line_in_both():
     gmr1_new = 'def f(a, b):\nreturn a - b'
     gmr2_new = 'def f(a, b):\nc = 10\nreturn a/b'  # ignore "c = 10" addition
     
-    assert get_common_modified_lines(gmr_old, gmr1_new, gmr2_new) == [1]
+    assert get_common_modified_lines(gmr_old, gmr1_new, gmr2_new) == [2]
     
 def test_common_modified_lines_modify_one_line_in_one():
     gmr_old = 'def f(a, b):\nreturn a + b'
@@ -29,4 +29,11 @@ def test_common_modified_lines_modify_multiple_line_in_both():
     
     # NOT SURE IF THIS SHOULD BE CORRECT BECAUSE a IS REASSIGNED SO THE LOGIC IS DIFFERENT
     
-    assert get_common_modified_lines(gmr_old, gmr1_new, gmr2_new) == [3]
+    assert get_common_modified_lines(gmr_old, gmr1_new, gmr2_new) == [4]
+
+def test_common_modified_lines_test_multiple_hunks():
+    gmr_old = '1\n2\n3\n4\n5\n6\n9\n10\n11\n12\n13\n14\n17\n18\n19\n20\n21\n22'
+    gmr1_new = '1\n2\n3\n4\n5\n7\n9\n10\n11\n12\n13\n15\n17\n18\n19\n20\n21\n23'
+    gmr2_new = '1\n2\n3\n4\n5\n8\n9\n10\n11\n12\n13\n16\n17\n18\n19\n20\n21\n24'
+    
+    assert get_common_modified_lines(gmr_old, gmr1_new, gmr2_new) == [6, 12, 18]

@@ -18,7 +18,7 @@ def get_common_modified_lines(gmr_old: List[str], gmr1_new: List[str], gmr2_new:
     gmr2_modified_lines = get_modified_lines(gmr2_patch)
 
     # Find the common modified lines between gmr1 and gmr2
-    return list(set(gmr1_modified_lines) & set(gmr2_modified_lines))
+    return sorted(list(set(gmr1_modified_lines) & set(gmr2_modified_lines)))
 
 def normalize_line_endings(text: str) -> str:
     # Normalize line endings to '\n'
@@ -29,12 +29,14 @@ def normalize_line_endings(text: str) -> str:
 
 def get_modified_lines(patch: Iterable[str]) -> List[int]:
     modified_lines = []
-    old_start = 0
 
     # Iterate through the lines in the patch
     for line in patch:
+        print(line)
         if line.startswith('--- a'):  # skip header inserted by difflib.united_diff
             continue
+        if line.startswith('@@ -'):
+            old_start = int(line[4])
         if line.startswith('-'):
             # If the line starts with '-', it's considered a modified line in the old version
             modified_lines.append(old_start)
