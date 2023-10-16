@@ -32,7 +32,6 @@ def get_modified_lines(patch: Iterable[str]) -> List[int]:
 
     # Iterate through the lines in the patch
     for line in patch:
-        print(line)
         if line.startswith('--- a'):  # skip header inserted by difflib.united_diff
             continue
         if line.startswith('@@ -'):
