@@ -1,5 +1,5 @@
 import difflib
-from typing import List
+from typing import List, Iterable
 import re
 
 
@@ -27,7 +27,7 @@ def normalize_line_endings(text: str) -> str:
     normalized_lines = normalized_lines.rstrip()
     return normalized_lines
 
-def get_modified_lines(patch: str) -> List[int]:
+def get_modified_lines(patch: Iterable[str]) -> List[int]:
     modified_lines = []
     old_start = 0
 
