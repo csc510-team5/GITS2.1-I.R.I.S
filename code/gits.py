@@ -33,6 +33,7 @@ from gits_custom import gits_custom
 from gits_list import gits_list_commands
 from gits_version import gits_version
 from gits_countcommits import count_commits
+from gits_check_conflicts import check_conflicts 
 
 from gits_auth import gits_authenticator
 
@@ -199,6 +200,9 @@ gits_version_subparser.set_defaults(func=gits_version)
 gits_creategoodrepo_subparser = subparsers.add_parser("creategoodrepo")
 gits_creategoodrepo_subparser.add_argument("repo_name", help="name of the repo")
 gits_creategoodrepo_subparser.set_defaults(func=gits_creategoodrepo)
+
+gits_check_conflicts_subparser = subparsers.add_parser("check_conflicts")
+gits_check_conflicts_subparser.set_defaults(func=check_conflicts)
 
 gits_custom_subparser = subparsers.add_parser("custom")
 gits_custom_subparser.add_argument(
