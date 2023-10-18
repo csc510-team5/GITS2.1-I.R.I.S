@@ -3,15 +3,15 @@ import os
 import sys
 from pathlib import Path
 
-
-def gits_list_commands(args):
+def gits_list_commands(subparser_commands):
     """
     Function that prints list of custom commands
     to user console
     """
     print("GITS Custom Commands")
-    # path = "https://github.com/jayrshah98/GITS2.1-I.R.I.S/tree/master/code"
 
+    for command in subparser_commands:
+        print(f"gits {command}")
 
     path = ""
     if sys.platform[:3] == "win":
@@ -22,6 +22,10 @@ def gits_list_commands(args):
         path = os.path.join(user_home_dir, "code")
 
     files = os.listdir(path)
+    ignore_commands = ["logging"]
+    default_commands = list(subparser_commands) + ignore_commands
+    files = [file for file in files if file[5:-3] not in default_commands]
+
     for f in files:
         if "_" in f and "gits" in f:
             f = f.replace('_', ' ')

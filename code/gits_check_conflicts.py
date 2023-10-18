@@ -1,11 +1,11 @@
 import subprocess
 import requests
 
-
-def check_conflicts():
+def check_conflicts(self):
     target_branch = "master"
     merge_base_sha = merge_base(target_branch)
     files = modified_files(merge_base_sha)
+    print(files)
     # call get_recent_gmrs
     # call parser
     

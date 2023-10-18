@@ -18,7 +18,7 @@ import gits_logging
 import sys
 
 
-def gits_creategoodrepo(args):
+def gits_create_good_repo(args):
     try:
         print("1. Apache\n2. MIT\n3. GNU\n")
         license = int(input("Enter License(a number from 1-3):"))
