@@ -2,7 +2,7 @@ import subprocess
 from subprocess import PIPE
 
 
-def upstream(args):
+def set_upstream(args):
     """
     Function that modifies the upstream repository.
     It will set upstream for a local branch to a remote branch.

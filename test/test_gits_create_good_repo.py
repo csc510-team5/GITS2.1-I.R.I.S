@@ -6,7 +6,7 @@ import pytest
 
 sys.path.insert(1, os.getcwd())
 
-from gits_creategoodrepo import gits_creategoodrepo
+from gits_create_good_repo import gits_create_good_repo
 from mock import patch
 
 

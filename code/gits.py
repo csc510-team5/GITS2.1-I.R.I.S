@@ -7,7 +7,7 @@ from gits_hello import gits_hello
 from gits_add import gits_add_func
 from gits_commit import gits_commit_func
 from gits_set import gits_set_func
-from gits_setupstream import upstream
+from gits_set_upstream import set_upstream
 from gits_create_branch import create_branch
 from gits_super_reset import super_reset
 
@@ -28,11 +28,12 @@ from gits_diff import gits_diff
 from gits_branch import gits_branch
 from gits_init import gits_init
 from gits_pull import gits_pull
-from gits_creategoodrepo import gits_creategoodrepo
+from gits_create_good_repo import gits_create_good_repo
 from gits_custom import gits_custom
 from gits_list import gits_list_commands
 from gits_version import gits_version
-from gits_countcommits import count_commits
+from gits_count_commits import count_commits
+from gits_check_conflicts import check_conflicts 
 
 from gits_auth import gits_authenticator
 
@@ -43,6 +44,9 @@ if not logger_status:
 
 parser = argparse.ArgumentParser()
 subparsers = parser.add_subparsers()
+
+def get_command_list(args):
+    gits_list_commands(subparsers.choices.keys())
 
 gits_hello_subparser = subparsers.add_parser('hello')
 gits_hello_subparser.set_defaults(func=gits_hello)
@@ -72,7 +76,7 @@ gits_commit_subparser.add_argument('--amend',
                                    help='amend commit message')
 gits_commit_subparser.set_defaults(func=gits_commit_func)
 
-gits_create_subparser = subparsers.add_parser('create')
+gits_create_subparser = subparsers.add_parser('create_branch')
 gits_create_subparser.add_argument('-b', help="branch name to create")
 gits_create_subparser.set_defaults(func=create_branch)
 
@@ -84,14 +88,14 @@ gits_merge_subparser = subparsers.add_parser('merge')
 gits_merge_subparser.add_argument('branch_name', help="branch name to merge")
 gits_merge_subparser.set_defaults(func=merge_branch)
 
-gits_upstream_subparser = subparsers.add_parser('upstream')
+gits_upstream_subparser = subparsers.add_parser('set_upstream')
 gits_upstream_subparser.add_argument('--remote',
                                      help='the remote branch name')
 gits_upstream_subparser.add_argument('--local',
                                      help="local branch name")
 gits_upstream_subparser.add_argument('--upstream',
                                      help="the upstream branch name")
-gits_upstream_subparser.set_defaults(func=upstream)
+gits_upstream_subparser.set_defaults(func=set_upstream)
 
 gits_profile_subparser = subparsers.add_parser('profile', help='profie help')
 gits_profile_subparser.set_defaults(func=gits_set_profile)
@@ -102,7 +106,7 @@ gits_profile_subparser.add_argument('--name',
                                     required=True,
                                     help='name to be used')
 
-gits_super_reset_subparser = subparsers.add_parser('super-reset')
+gits_super_reset_subparser = subparsers.add_parser('super_reset')
 gits_super_reset_subparser.add_argument('--name',
                                         help="Name of the repository to super reset")
 gits_super_reset_subparser.set_defaults(func=super_reset)
@@ -187,18 +191,21 @@ gits_pull_subparser.add_argument("--branch", nargs="?", default=False,
                                  required=False)
 gits_pull_subparser.set_defaults(func=gits_pull)
 
-gits_countcommits_subparser = subparsers.add_parser("countcommits")
+gits_countcommits_subparser = subparsers.add_parser("count_commits")
 gits_countcommits_subparser.set_defaults(func=count_commits)
 
 gits_list_subparser = subparsers.add_parser("list")
-gits_list_subparser.set_defaults(func=gits_list_commands)
+gits_list_subparser.set_defaults(func=get_command_list)
 
 gits_version_subparser = subparsers.add_parser("version")
 gits_version_subparser.set_defaults(func=gits_version)
 
-gits_creategoodrepo_subparser = subparsers.add_parser("creategoodrepo")
+gits_creategoodrepo_subparser = subparsers.add_parser("create_good_repo")
 gits_creategoodrepo_subparser.add_argument("repo_name", help="name of the repo")
-gits_creategoodrepo_subparser.set_defaults(func=gits_creategoodrepo)
+gits_creategoodrepo_subparser.set_defaults(func=gits_create_good_repo)
+
+gits_check_conflicts_subparser = subparsers.add_parser("check_conflicts")
+gits_check_conflicts_subparser.set_defaults(func=check_conflicts)
 
 gits_custom_subparser = subparsers.add_parser("custom")
 gits_custom_subparser.add_argument(

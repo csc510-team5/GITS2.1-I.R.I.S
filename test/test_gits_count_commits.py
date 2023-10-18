@@ -4,7 +4,7 @@ import sys
 
 sys.path.insert(1, os.getcwd())
 
-from gits_countcommits import count_commits
+from gits_count_commits import count_commits
 from mock import patch, Mock
 
 
