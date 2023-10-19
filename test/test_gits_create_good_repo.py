@@ -28,7 +28,7 @@ def test_gits_creategoodrepo(mockvar1):
     """
     Function to test gits creategoodrepo , success case
     """
-    test_result = gits_creategoodrepo(mockvar1)
+    test_result = gits_create_good_repo(mockvar1)
     remove_extras(".")
     if test_result == 0:
         assert True, "Normal Case"
@@ -43,7 +43,7 @@ def test_gits_creategoodrepo_novar_sadcase(mockvar1):
     """
     Function to test gits creategoodrepo without any args
     """
-    test_result = gits_creategoodrepo(mockvar1)
+    test_result = gits_create_good_repo(mockvar1)
     remove_extras(".")
     if not test_result:
         assert True, "Normal Case"
@@ -58,7 +58,7 @@ def test_gits_creategoodrepo_novar_sadcase(mockvar1):
 #     Function to test gits creategoodrepo , failure case i.e subprocess will return 1 on command failing to execute
 #     """
 #     mock_args = parse_args(mock_args)
-#     test_result = gits_creategoodrepo(mock_args)
+#     test_result = gits_create_good_repo(mock_args)
 #     remove_extras(".")
 #     if test_result == 1:
 #         assert True, "Failure Case - Success"
