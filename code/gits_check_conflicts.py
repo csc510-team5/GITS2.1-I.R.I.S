@@ -81,6 +81,7 @@ def check_conflicts(args):
 
     print(json.dumps(file_to_pr, indent=4))
 
+    
 def git_merge_base(target_branch):
     try:
         output = subprocess.run(
