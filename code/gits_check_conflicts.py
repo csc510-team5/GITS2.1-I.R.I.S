@@ -32,16 +32,16 @@ def check_conflicts(args):
         for pr in recent_prs
     ]
 
-    conflicting_prs = [
+    common_file_prs = [
         pr
         for pr in recent_prs
         if not set(modified_files).isdisjoint(pr.get('filePaths', []))
     ]
-    if (not conflicting_prs):
+    if (not common_file_prs):
         print("There are no conflicting pull requests!")
         return
 
-    print(conflicting_prs)
+    print(common_file_prs)
 
 def git_merge_base(target_branch):
     try:
