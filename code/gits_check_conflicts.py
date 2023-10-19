@@ -33,7 +33,7 @@ def check_conflicts(args):
     ]
 
     common_file_prs = [
-        pr
+        {**pr, 'commonFilePaths': list(set(pr.get('filePaths', [])) & set(modified_files))}
         for pr in recent_prs
         if not set(modified_files).isdisjoint(pr.get('filePaths', []))
     ]
@@ -41,7 +41,23 @@ def check_conflicts(args):
         print("There are no conflicting pull requests!")
         return
 
-    print(common_file_prs)
+    file_to_pr = {}
+    for pull_request in common_file_prs:
+        pr = {
+            "number": pull_request["number"],
+            "title": pull_request["title"],
+            "author": dict(pull_request["author"])["login"],
+            "baseRef": dict(dict(pull_request["baseRef"])["target"])["oid"],
+            "headRef": dict(dict(pull_request["headRef"])["target"])["oid"]
+        }
+
+        for path in pull_request.get("commonFilePaths", []):
+            if path in file_to_pr:
+                file_to_pr[path].append(pr)
+            else:
+                file_to_pr[path] = [pr]
+
+    print(json.dumps(file_to_pr, indent=4))
 
 def git_merge_base(target_branch):
     try:
