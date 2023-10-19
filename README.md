@@ -1,7 +1,7 @@
 # GITS2.1 - I.R.I.S
 
 ![GitHub](https://img.shields.io/github/license/jayrshah98/GITS2.1-I.R.I.S)
-[![codecov](https://codecov.io/gh/jayrshah98/GITS2.1-I.R.I.S/branch/master/graph/badge.svg?token=I3KHGTAQLU)](https://codecov.io/gh/jayrshah98/GITS2.1-I.R.I.S)
+[![codecov](https://codecov.io/gh/jayrshah98/GITS2.1-I.R.I.S/branch/master/graph/badge.svg?token=I3KHGTAQLU)](https://codecov.io/gh/csc510-team5/GITS2.1-I.R.I.S)
 [![DOI](https://zenodo.org/badge/428784754.svg)](https://zenodo.org/badge/latestdoi/428784754)
 [![GitHub issues](https://img.shields.io/github/issues/jayrshah98/GITS2.1-I.R.I.S)](https://github.com/jayrshah98/GITS2.1-I.R.I.S/issues?q=is%3Aopen+is%3Aissue)
 [![GitHub closed issues](https://img.shields.io/github/issues-closed/jayrshah98/GITS2.1-I.R.I.S)](https://github.com/jayrshah98/GITS2.1-I.R.I.S/issues?q=is%3Aissue+is%3Aclosed)
@@ -85,6 +85,8 @@ I.R.I.S can be thought of a base repo to make sure your project repo fits the bi
 5.  Now gits command is accessible all over the system.
 
 ## Installation Using Docker
+
+We have provided a Dockerfile to build an image containing GITS
 
 1.  Clone GITS Repo
 2.  Enter repo directory
