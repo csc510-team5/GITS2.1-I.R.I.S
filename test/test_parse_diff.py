@@ -1,3 +1,8 @@
+import sys
+import os
+
+sys.path.insert(1, os.getcwd())
+
 from parse_diff import normalize_line_endings, get_common_modified_lines
 
 
