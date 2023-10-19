@@ -1,21 +1,16 @@
 # GITS2.1 - I.R.I.S
 
-![GitHub](https://img.shields.io/github/license/jayrshah98/GITS2.1-I.R.I.S)
+![GitHub](https://img.shields.io/github/license/csc510-team5/GITS2.1-I.R.I.S)
 [![codecov](https://codecov.io/gh/csc510-team5/GITS2.1-I.R.I.S/branch/master/graph/badge.svg)](https://codecov.io/gh/csc510-team5/GITS2.1-I.R.I.S)
 [![DOI](https://zenodo.org/badge/428784754.svg)](https://zenodo.org/badge/latestdoi/428784754)
-[![GitHub issues](https://img.shields.io/github/issues/jayrshah98/GITS2.1-I.R.I.S)](https://github.com/jayrshah98/GITS2.1-I.R.I.S/issues?q=is%3Aopen+is%3Aissue)
-[![GitHub closed issues](https://img.shields.io/github/issues-closed/jayrshah98/GITS2.1-I.R.I.S)](https://github.com/jayrshah98/GITS2.1-I.R.I.S/issues?q=is%3Aissue+is%3Aclosed)
-![Lines of code](https://img.shields.io/tokei/lines/github/jayrshah98/GITS2.1-I.R.I.S)
-![Github pull requests](https://img.shields.io/github/issues-pr/jayrshah98/GITS2.1-I.R.I.S)
-[![GitHub stars](https://badgen.net/github/stars/jayrshah98/GITS2.1-I.R.I.S)](https://badgen.net/github/stars/jayrshah98/GITS2.1-I.R.I.S)
-[![Respost - Write comment to new Issue event](https://github.com/jayrshah98/GITS2.1-I.R.I.S/actions/workflows/Respost.yml/badge.svg)](https://github.com/jayrshah98/GITS2.1-I.R.I.S/actions/workflows/Respost.yml)
-[![Style Checker and Prettify Code](https://github.com/jayrshah98/GITS2.1-I.R.I.S/actions/workflows//Style_Checker_and_Prettify_Code.yml/badge.svg)](https://github.com/jayrshah98/GITS2.1-I.R.I.S/actions/workflows//Style_Checker_and_Prettify_Code.yml)
-![version](https://img.shields.io/badge/version-1.0-blue)
-[![Greetings](https://github.com/jayrshah98/GITS2.1-I.R.I.S/actions/workflows/greetings.yml/badge.svg)](https://github.com/jayrshah98/GITS2.1-I.R.I.S/actions/workflows/greetings.yml)
-[![Close as a feature](https://github.com/jayrshah98/GITS2.1-I.R.I.S/actions/workflows/close_as_a_feature.yml/badge.svg)](https://github.com/jayrshah98/GITS2.1-I.R.I.S/actions/workflows/close_as_a_feature.yml)
-![GitHub contributors](https://img.shields.io/github/contributors/jayrshah98/GITS2.1-I.R.I.S)
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/jayrshah98/GITS2.1-I.R.I.S)
-[![Build Status](https://app.travis-ci.com/jayrshah98/GITS2.1-I.R.I.S.svg?branch=master)](https://app.travis-ci.com/jayrshah98/GITS2.1-I.R.I.S)
+[![GitHub issues](https://img.shields.io/github/issues/csc510-team5/GITS2.1-I.R.I.S)](https://github.com/csc510-team5/GITS2.1-I.R.I.S/issues?q=is%3Aissue+is%3Aopen+)
+[![GitHub closed issues](https://img.shields.io/github/issues-closed/csc510-team5/GITS2.1-I.R.I.S)](https://github.com/csc510-team5/GITS2.1-I.R.I.S/issues?q=is%3Aissue+is%3Aclosed+)
+![Github pull requests](https://img.shields.io/github/issues-pr/csc510-team5/GITS2.1-I.R.I.S)
+[![GitHub stars](https://badgen.net/github/stars/csc510-team5/GITS2.1-I.R.I.S)](https://badgen.net/github/stars/csc510-team5/GITS2.1-I.R.I.S)
+![version](https://img.shields.io/badge/version-2.0-blue)
+
+![GitHub contributors](https://img.shields.io/github/contributors/csc510-team5/GITS2.1-I.R.I.S)
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/csc510-team5/GITS2.1-I.R.I.S)
 
 
 
