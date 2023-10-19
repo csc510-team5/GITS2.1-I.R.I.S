@@ -84,6 +84,20 @@ I.R.I.S can be thought of a base repo to make sure your project repo fits the bi
 4.  Run "autoRun.bat" as administrator.
 5.  Now gits command is accessible all over the system.
 
+## Installation Using Docker
+
+1.  Clone GITS Repo
+2.  Enter repo directory
+3.  With Docker installed and the Docker daemon running run the following command
+    ```
+    docker build -t image_name .
+    ```
+4.  Now run a container with the following command
+    ```
+    docker run -d -it image_name /bin/bash
+    ```
+5.  Now the container is running with Python3, GitHub CLI and GITS
+
 # How to Contribute?
 
 Please take a look at our CONTRIBUTING.md where we provide instructions on contributing to the repo and help us in enhancing the current video conferencing platforms.
