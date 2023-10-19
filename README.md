@@ -2,7 +2,7 @@
 
 ![GitHub](https://img.shields.io/github/license/csc510-team5/GITS2.1-I.R.I.S)
 [![codecov](https://codecov.io/gh/csc510-team5/GITS2.1-I.R.I.S/branch/master/graph/badge.svg)](https://codecov.io/gh/csc510-team5/GITS2.1-I.R.I.S)
-[![DOI](https://zenodo.org/badge/428784754.svg)](https://zenodo.org/badge/latestdoi/428784754)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.10023393.svg)](https://doi.org/10.5281/zenodo.10023393)
 [![GitHub issues](https://img.shields.io/github/issues/csc510-team5/GITS2.1-I.R.I.S)](https://github.com/csc510-team5/GITS2.1-I.R.I.S/issues?q=is%3Aissue+is%3Aopen+)
 [![GitHub closed issues](https://img.shields.io/github/issues-closed/csc510-team5/GITS2.1-I.R.I.S)](https://github.com/csc510-team5/GITS2.1-I.R.I.S/issues?q=is%3Aissue+is%3Aclosed+)
 ![Github pull requests](https://img.shields.io/github/issues-pr/csc510-team5/GITS2.1-I.R.I.S)
