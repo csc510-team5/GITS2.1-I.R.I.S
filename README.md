@@ -1,12 +1,4 @@
-# GITS2.1 - I.R.I.S!
-
-# The Demo Video:
-
-https://youtu.be/khQV-oXNhUE
-
-![I R I S  - Ideal Repository for Software Projects (1)](https://user-images.githubusercontent.com/38115399/143765775-0cc8030f-96c2-4bee-861d-61a0d8c7ae71.gif)
-
-### GITS2.1 - I.R.I.S (Ideal ReposItory for Software projects)
+# GITS2.1 - I.R.I.S
 
 ![GitHub](https://img.shields.io/github/license/jayrshah98/GITS2.1-I.R.I.S)
 [![codecov](https://codecov.io/gh/jayrshah98/GITS2.1-I.R.I.S/branch/master/graph/badge.svg?token=I3KHGTAQLU)](https://codecov.io/gh/jayrshah98/GITS2.1-I.R.I.S)
@@ -25,11 +17,11 @@ https://youtu.be/khQV-oXNhUE
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/jayrshah98/GITS2.1-I.R.I.S)
 [![Build Status](https://app.travis-ci.com/jayrshah98/GITS2.1-I.R.I.S.svg?branch=master)](https://app.travis-ci.com/jayrshah98/GITS2.1-I.R.I.S)
 
-Project Video :
 
-https://user-images.githubusercontent.com/38115399/143734349-42035bc1-9dc3-4bd0-8b99-574f6a91cd93.mp4
 
-# About GITS2.1 - I.R.I.S
+
+
+# About 
 
 "Your repo is your resume. But what is a good looking repo?"
 
@@ -45,21 +37,10 @@ I.R.I.S (Ideal ReposItory for Software projects) is a tool which can help develo
 
 You don't have to worry about missing a test case, or scratch your head on what more files or functionalities are needed to make your repository look good.
 
-2. Currently, this project cannot be run on Windows. You need to make use of WSL to work on this project in Windows
-
 I.R.I.S streamlines your repository as per the Software Engineering Standards, so that your repository has all the necessary Structure to be called a "Good Repo".
 
 I.R.I.S can be thought of a base repo to make sure your project repo fits the bill.
 
-# Video for Delta Features
-
-https://user-images.githubusercontent.com/47474447/141851475-3eb31270-a38e-4cd6-bf7f-7b536fd5c10a.mp4
-
-# Video for Delta Features Phase 3 (Working on Windows as well as MacOs/Linux)
-
-https://user-images.githubusercontent.com/25223347/143947205-3668d521-0bcc-4dc3-aea6-342fc199eb24.mp4
-
-# Installation Setup
 
 ## On Linux/MacOS Machines
 
