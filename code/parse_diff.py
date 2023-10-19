@@ -35,7 +35,7 @@ def get_modified_lines(patch: Iterable[str]) -> List[int]:
         if line.startswith('--- a'):  # skip header inserted by difflib.united_diff
             continue
         if line.startswith('@@ -'):
-            old_start = int(line[4])
+            old_start = int(line[4:].split(',')[0])
         if line.startswith('-'):
             # If the line starts with '-', it's considered a modified line in the old version
             modified_lines.append(old_start)
