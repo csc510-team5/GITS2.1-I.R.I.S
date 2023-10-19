@@ -47,6 +47,7 @@ def check_conflicts(args):
     file_to_pr = {}
     for pull_request in common_file_prs:
         pr = {
+            "filesUrl": f"{pull_request['url']}/files",
             "number": pull_request["number"],
             "title": pull_request["title"],
             "author": dict(pull_request["author"])["login"],
@@ -79,7 +80,26 @@ def check_conflicts(args):
                 pr["hasConflict"] = True
                 pr["commonModifiedLines"] = common_modified_lines
 
-    print(json.dumps(file_to_pr, indent=4))
+
+    conflicts = {
+        file: [pr for pr in pr_list if pr["hasConflict"]]
+        for file, pr_list in file_to_pr.items()
+        if any(pr["hasConflict"] for pr in pr_list)
+    }
+    if(not conflicts):
+        print("There were no merge conflicts detected!")
+        return
+
+    result = "\nConflicts were found in the following files: \n"
+    for file in conflicts:
+        result += f"\n'{file}':\n"
+        for pr in conflicts[file]:
+            result += f"\tPR #{pr['number']}: {pr['title']}\n"
+            result += f"\tAuthor: {pr['author']}\n"
+            result += f"\tConflict lines: [{', '.join(map(str, pr['commonModifiedLines']))}]\n"
+            result += f"\tPR changes: {pr['filesUrl']}\n"
+
+    print(result)
 
 def git_merge_base(target_branch):
     try:
@@ -136,6 +156,7 @@ def get_recent_prs(target_branch):
         repository (owner: $github_repo_owner, name: $github_repo_name) {{
             pullRequests (first: 100, states: OPEN, baseRefName: $target_branch, orderBy: {{ field: CREATED_AT, direction: DESC }}) {{
                 nodes {{
+                    url
                     number
                     title
                     author {{ login }}
