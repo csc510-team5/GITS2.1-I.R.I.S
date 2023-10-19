@@ -155,6 +155,6 @@ This repository is made for CSC-510 Software Engineering Course at NC State Univ
 
 ## Contact Us:
 
-For any questions and contribution please contact: jshah7@ncsu.edu
+For any questions and contribution please contact: jjoseph6@ncsu.edu
 
 Made with ❤️ on GitHub.
