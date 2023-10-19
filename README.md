@@ -12,7 +12,9 @@
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/csc510-team5/GITS2.1-I.R.I.S)
 
 
+# Recent Additions
 
+Recently we added automatic merge conflict detection using ```gits check_conflicts```. This allows you to preview merge conflicts before they happen. This feature is powered by GitHub CLI which is now required (found here: https://cli.github.com/). We have provided a Dockerfile which includes GitHub CLI and Python3 so you can build an image using GITS (Docker installation instructions below).
 
 
 # About 
