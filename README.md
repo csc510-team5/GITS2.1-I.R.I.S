@@ -8,7 +8,6 @@
 ![Github pull requests](https://img.shields.io/github/issues-pr/csc510-team5/GITS2.1-I.R.I.S)
 [![GitHub stars](https://badgen.net/github/stars/csc510-team5/GITS2.1-I.R.I.S)](https://badgen.net/github/stars/csc510-team5/GITS2.1-I.R.I.S)
 ![version](https://img.shields.io/badge/version-2.0-blue)
-
 ![GitHub contributors](https://img.shields.io/github/contributors/csc510-team5/GITS2.1-I.R.I.S)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/csc510-team5/GITS2.1-I.R.I.S)
 
