@@ -3,22 +3,22 @@ from typing import List, Iterable
 import re
 
 
-def get_common_modified_lines(gmr_old: List[str], gmr1_new: List[str], gmr2_new: List[str]) -> List[int]:
+def get_common_modified_lines(pr_old, pr1_new, pr2_new) -> List[int]:
     # Normalize for different OS. Split lines into list, expected by difflib.united_diff
-    gmr_old = normalize_line_endings(gmr_old).split('\n')
-    gmr1_new = normalize_line_endings(gmr1_new).split('\n')
-    gmr2_new = normalize_line_endings(gmr2_new).split('\n')
+    pr_old = pr_old.split('\n')
+    pr1_new = pr1_new.split('\n')
+    pr2_new = pr2_new.split('\n')
     
-    # Generate unified diff patches for gmr_old to gmr1_new and gmr_old to gmr2_new
-    gmr1_patch = difflib.unified_diff(gmr_old, gmr1_new, lineterm='', fromfile='a', tofile='b')
-    gmr2_patch = difflib.unified_diff(gmr_old, gmr2_new, lineterm='', fromfile='a', tofile='b')
+    # Generate unified diff patches for pr_old to pr1_new and pr_old to pr2_new
+    pr1_patch = difflib.unified_diff(pr_old, pr1_new, lineterm='', fromfile='a', tofile='b')
+    pr2_patch = difflib.unified_diff(pr_old, pr2_new, lineterm='', fromfile='a', tofile='b')
 
     # Get lists of modified lines from the generated patches
-    gmr1_modified_lines = get_modified_lines(gmr1_patch)
-    gmr2_modified_lines = get_modified_lines(gmr2_patch)
+    pr1_modified_lines = get_modified_lines(pr1_patch)
+    pr2_modified_lines = get_modified_lines(pr2_patch)
 
-    # Find the common modified lines between gmr1 and gmr2
-    return sorted(list(set(gmr1_modified_lines) & set(gmr2_modified_lines)))
+    # Find the common modified lines between pr1 and pr2
+    return sorted(list(set(pr1_modified_lines) & set(pr2_modified_lines)))
 
 def normalize_line_endings(text: str) -> str:
     # Normalize line endings to '\n'

@@ -1,5 +1,8 @@
 import subprocess
 import json
+from parse_diff import normalize_line_endings, get_common_modified_lines
+from get_file_at_version import get_file_at_version
+from get_github_owner_repo import get_github_owner_repo
 
 def check_conflicts(args):
     target_branch = ""
@@ -47,8 +50,10 @@ def check_conflicts(args):
             "number": pull_request["number"],
             "title": pull_request["title"],
             "author": dict(pull_request["author"])["login"],
-            "baseRef": dict(dict(pull_request["baseRef"])["target"])["oid"],
-            "headRef": dict(dict(pull_request["headRef"])["target"])["oid"]
+            "baseRef": pull_request["baseRefOid"],
+            "headRef": dict(dict(pull_request["headRef"])["target"])["oid"],
+            "hasConflict": False,
+            "skipped": False
         }
 
         for path in pull_request.get("commonFilePaths", []):
@@ -56,6 +61,23 @@ def check_conflicts(args):
                 file_to_pr[path].append(pr)
             else:
                 file_to_pr[path] = [pr]
+
+    for file in file_to_pr:
+        for pr in file_to_pr[file]:
+            local_base = normalize_line_endings(git_file_at_version(file, merge_base))
+            pr_base = normalize_line_endings(get_file_at_version(file, pr["baseRef"]))
+
+            if(local_base != pr_base):
+                pr["skipped"] = True
+                continue
+
+            local_head = normalize_line_endings(get_local_file(file))
+            pr_head = normalize_line_endings(get_file_at_version(file, pr["headRef"]))
+
+            common_modified_lines = get_common_modified_lines(pr_base, local_head, pr_head)
+            if (len(common_modified_lines) != 0):
+                pr["hasConflict"] = True
+                pr["commonModifiedLines"] = common_modified_lines
 
     print(json.dumps(file_to_pr, indent=4))
 
@@ -84,10 +106,10 @@ def git_modified_files(merge_base_sha):
     except subprocess.CalledProcessError:
         return ""
 
-def git_origin_url():
+def git_file_at_version(path, sha):
     try:
         output = subprocess.run(
-            ["git", "config", "--get", "remote.origin.url"],
+            ["git", "--no-pager", "show", f"{sha}:{path}"],
             capture_output=True,
             text=True,
             check=True
@@ -96,23 +118,29 @@ def git_origin_url():
     except subprocess.CalledProcessError:
         return ""
 
-def get_recent_prs(target_branch):
-    origin_url = git_origin_url()
+def get_local_file(file):
+    try:
+        with open(file, 'r') as file:
+            contents = file.read()
+            return contents
+    except FileNotFoundError:
+        return ""
+    except Exception:
+        return ""
 
-    origin_url = origin_url.split('/')
-    github_project_owner = origin_url[-2]
-    github_project_name = origin_url[-1][0:-4]
+def get_recent_prs(target_branch):
+    github_repo_owner, github_repo_name = get_github_owner_repo()
 
     recent_prs_query = f"""
-    query($github_project_owner: String!, $github_project_name: String!, $target_branch: String!) {{
-        repository (owner: $github_project_owner, name: $github_project_name) {{
+    query($github_repo_owner: String!, $github_repo_name: String!, $target_branch: String!) {{
+        repository (owner: $github_repo_owner, name: $github_repo_name) {{
             pullRequests (first: 100, states: OPEN, baseRefName: $target_branch, orderBy: {{ field: CREATED_AT, direction: DESC }}) {{
                 nodes {{
                     number
                     title
                     author {{ login }}
                     files (first: 100) {{ nodes {{ path }} }}
-                    baseRef {{ target {{ oid }} }}
+                    baseRefOid
                     headRef {{ target {{ oid }} }}
                 }}
             }}
@@ -122,8 +150,8 @@ def get_recent_prs(target_branch):
 
     gh_cli_command = [
         "gh", "api", "graphql",
-         "-F", f"github_project_owner={github_project_owner}",
-         "-F", f"github_project_name={github_project_name}",
+         "-F", f"github_repo_owner={github_repo_owner}",
+         "-F", f"github_repo_name={github_repo_name}",
          "-F", f"target_branch={target_branch}",
          "-f", f"query={recent_prs_query}"
     ]
