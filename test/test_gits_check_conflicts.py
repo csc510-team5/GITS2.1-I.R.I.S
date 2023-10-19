@@ -9,5 +9,4 @@ def test_modified_files():
     target_branch = "master"
     merge_base_sha = git_merge_base(target_branch)
     files = git_modified_files(merge_base_sha)
-    print(files)
     assert isinstance(files, list)
