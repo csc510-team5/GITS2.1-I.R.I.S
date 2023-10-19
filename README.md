@@ -99,45 +99,9 @@ Please take a look at our CONTRIBUTING.md where we provide instructions on contr
 4. Created commands to show version of Git, count commits, list all custom created commands.
 5. Create a custom command to work with Git and make development fun.
 
-## Experimentation setup for Phase 3
 
-(Please check the Projects Tab to see how you can make the project better)
 
-This project aims to ease the developers efforts while working on their project repos. I.R.I.S makes their work easier and saves time by providing all the necessary default files in the required structure to ensure that the developers can focus on making their project better and not worry about the repository.
 
-Here are few motivation points behind coming up with this idea:
-
-- Sometimes when you're working with different files and branches, there are way too many commands which need to be updated in an order. Using a custom command, which can do multiple commands at the same time in a specific order saves time and effort from the developer.
-- When working on one of the homeworks for the course, we realised the dearth in project repos which adhere to the standard structure.
-- Even if the Idea is good, developers miss out on making a good impression due to the inability to make the projects transferable and easily-usable.
-
-To solve the issues described above, we came up with the project **I.R.I.S** that stands for **Ideal ReposItory for Software projects**.
-
-### Tasks list
-
-You can checkout the Projects Tab in GitHub to see the upcoming tasks for the Project.
-
-## Delta for Phase 3
-
-- [x] Initally , the software could only be implemented on MacOs or Linux Machines. Now we have made sure the commands can be executed on windows and that the software can be executed on windows platform as well.
-- [x] Also made an executable to setup the project on command line for ease of use for the user.
-- [x] The commands now run on windows and are able to take arguments as well.
-- [x] The user needs to set up and authenticate this software just once. Alias gets created that is permanent and can be used from anywhere on the command line in windows.
-
-## Future Scope
-
-- [ ] Can add more git custom commands to improve quality of life.
-- [ ] Can allow users to create commands that they want.
-- [ ] Implement a UI.
-- [ ] Implement the software on docker to make it totally OS independent.
-
-### Quantitative measures
-
-Here are some measures that can help compare the results between traditional Git/Github Repo Creation and I.R.I.S
-
-1. The default files created as part of the repo creation.
-2. The structure followed for the default files.
-3. The default template followed for most files, so that even the most layman developer can ensure that his repo adheres to the Standard.
 
 # Team Members
 
