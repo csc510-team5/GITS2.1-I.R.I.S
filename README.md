@@ -110,6 +110,7 @@ Please take a look at our CONTRIBUTING.md where we provide instructions on contr
 3. Score Calculation to see how much the repo matches with the ideal repo structure.
 4. Created commands to show version of Git, count commits, list all custom created commands.
 5. Create a custom command to work with Git and make development fun.
+6. Resolve merge conflicts before they happen using GitHub CLI.
 
 
 
