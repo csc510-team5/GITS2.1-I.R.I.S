@@ -11,6 +11,9 @@
 ![GitHub contributors](https://img.shields.io/github/contributors/csc510-team5/GITS2.1-I.R.I.S)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/csc510-team5/GITS2.1-I.R.I.S)
 
+<div style="text-align:center;">
+  <img src="gits_check_conflicts.gif" alt="gits check_conflicts" />
+</div>
 
 # About 
 
