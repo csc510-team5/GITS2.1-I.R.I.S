@@ -12,6 +12,10 @@ def test_get_github_owner_repo():
     assert owner_name == 'csc510-team5'
     assert repo_name[:5] == 'GITS2.1-I.R.I.S'[:5]
 
+def test_get_github_owner_repo_has_valid_url():
+    owner_name, repo_name = get_github_owner_repo()
+
+
 
 
 def test_get_github_owner_repo_data_is_not_empty():
