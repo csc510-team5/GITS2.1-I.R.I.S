@@ -12,11 +12,6 @@
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/csc510-team5/GITS2.1-I.R.I.S)
 
 
-# Recent Additions
-
-Recently we added automatic merge conflict detection using ```gits check_conflicts```. This allows you to preview merge conflicts before they happen. This feature is powered by GitHub CLI which is now required (found here: https://cli.github.com/). We have provided a [Dockerfile](https://github.com/csc510-team5/GITS2.1-I.R.I.S/blob/master/Dockerfile) which includes GitHub CLI and Python3 so you can build an image using GITS (Docker installation instructions below).
-
-
 # About 
 
 "Your repo is your resume. But what is a good looking repo?"
@@ -104,16 +99,7 @@ Please take a look at our CONTRIBUTING.md where we provide instructions on contr
 
 ## Functionalities Implemented
 
-0. Use custom commands to work with Git from your command line.
-1. Create Default files on startup according to the Stucture.
-2. Files will be auto generated with template to give the developers an idea on what needs to be filled. Also, the user is given a choice to add license in his repo from the list provided.
-3. Score Calculation to see how much the repo matches with the ideal repo structure.
-4. Created commands to show version of Git, count commits, list all custom created commands.
-5. Create a custom command to work with Git and make development fun.
-6. Resolve merge conflicts before they happen using GitHub CLI.
-
-
-
+Recently we added automatic merge conflict detection using ```gits check_conflicts```. This allows you to preview merge conflicts before they happen. This feature is powered by GitHub CLI which is now required (found here: https://cli.github.com/). We have provided a [Dockerfile](https://github.com/csc510-team5/GITS2.1-I.R.I.S/blob/master/Dockerfile) which includes GitHub CLI and Python3 so you can build an image using GITS (Docker installation instructions below).
 
 
 # Team Members
