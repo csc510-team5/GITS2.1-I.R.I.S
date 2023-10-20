@@ -14,3 +14,4 @@ def get_github_owner_repo():
         return owner, repo
     except subprocess.CalledProcessError:
         return ""
+
