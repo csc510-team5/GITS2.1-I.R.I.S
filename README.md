@@ -32,6 +32,8 @@ I.R.I.S streamlines your repository as per the Software Engineering Standards, s
 
 I.R.I.S can be thought of a base repo to make sure your project repo fits the bill.
 
+## Demo Video:
+https://www.youtube.com/watch?v=vm8eTN7NGrE&feature=youtu.be
 
 ## On Linux/MacOS Machines
 
