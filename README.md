@@ -15,7 +15,13 @@
   <img src="gits_check_conflicts.gif" alt="gits check_conflicts" />
 </div>
 
-# About 
+## Functionalities Implemented
+We added automatic merge conflict detection using `gits check_conflicts`. This allows you to preview merge conflicts before they happen. This feature is powered by GitHub CLI. We have provided a [Dockerfile](https://github.com/csc510-team5/GITS2.1-I.R.I.S/blob/master/Dockerfile) which includes GitHub CLI and Python3 so you can build an image using GITS (Docker installation instructions below).  
+
+The full demo for `gits check_conflicts` can be seen [here](https://youtu.be/vm8eTN7NGrE)
+
+
+## About 
 
 "Your repo is your resume. But what is a good looking repo?"
 
@@ -34,9 +40,6 @@ You don't have to worry about missing a test case, or scratch your head on what 
 I.R.I.S streamlines your repository as per the Software Engineering Standards, so that your repository has all the necessary Structure to be called a "Good Repo".
 
 I.R.I.S can be thought of a base repo to make sure your project repo fits the bill.
-
-## Demo Video:
-https://www.youtube.com/watch?v=vm8eTN7NGrE&feature=youtu.be
 
 ## On Linux/MacOS Machines
 
@@ -96,18 +99,11 @@ We have provided a Dockerfile to build an image containing GITS
     ```
 5.  Now the container is running with Python3, GitHub CLI and GITS
 
-# How to Contribute?
+## How to Contribute?
 
 Please take a look at our CONTRIBUTING.md where we provide instructions on contributing to the repo and help us in enhancing the current video conferencing platforms.
 
-# Documentation
-
-## Functionalities Implemented
-
-Recently we added automatic merge conflict detection using ```gits check_conflicts```. This allows you to preview merge conflicts before they happen. This feature is powered by GitHub CLI which is now required (found here: https://cli.github.com/). We have provided a [Dockerfile](https://github.com/csc510-team5/GITS2.1-I.R.I.S/blob/master/Dockerfile) which includes GitHub CLI and Python3 so you can build an image using GITS (Docker installation instructions below).
-
-
-# Team Members
+## Team Members
 
 This repository is made for CSC-510 Software Engineering Course at NC State University for Fall 2023.
 
